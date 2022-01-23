@@ -59,7 +59,7 @@ public class UserRegistration {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the password");
         String password = scanner.next();
-        String regex = "^[A-Za-z]{8,}$";
+        String regex = "^[A-Z]{1,}[a-z]{7,}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(password);
         boolean r = m.matches();

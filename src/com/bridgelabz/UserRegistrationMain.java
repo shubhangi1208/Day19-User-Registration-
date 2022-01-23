@@ -9,23 +9,25 @@ public class UserRegistrationMain {
         int choice;
 
         do {
-            System.out.println(" 1.To validate First Name \n 2.To validate Last Name \n 3.To Validate Email ID \n 4.Quit ");
+            System.out.println(" 1.To validate First Name \n 2.To validate Last Name \n 3.To Validate Email ID \n 4.To validate Mobile number  \n 5.Quit ");
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    UserRegistration.validFirstName();
+                    user.validFirstName();
                     break;
                 case 2:
-                    UserRegistration.validLastName();
+                    user.validLastName();
                     break;
                 case 3 :
-                        UserRegistration.validEmail();
-                    break;
+                    user.validEmail();
                 case 4:
+                    user.validMobileNumber();
+                    break;
+                case 5:
                     System.out.println("Thank You ");
                     break;
             }
 
-        } while (choice != 4);
+        } while (choice != 5);
     }
 }

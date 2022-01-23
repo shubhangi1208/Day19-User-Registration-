@@ -55,4 +55,17 @@ public class UserRegistration {
         else
             System.out.println("Phone number is Invalid");
     }
+    public void validPassword(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the password");
+        String password = scanner.next();
+        String regex = "^[A-Za-z]{8,}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(password);
+        boolean r = m.matches();
+        if (r)
+            System.out.println("Password is Valid");
+        else
+            System.out.println("Password is Invalid");
+    }
 }

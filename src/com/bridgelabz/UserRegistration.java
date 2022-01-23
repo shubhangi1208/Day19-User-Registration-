@@ -30,4 +30,16 @@ public class UserRegistration {
         else
             System.out.println("Last Name is Invalid");
     }
+    public static void validEmail() {
+        System.out.println("Enter the Email ID");
+        String email = scanner.next();
+        String regex = "^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(email);
+        boolean r = m.matches();
+        if (r)
+            System.out.println("Email is valid");
+        else
+            System.out.println("Email is Invalid");
+    }
 }

@@ -9,7 +9,7 @@ public class UserRegistrationMain {
         int choice;
 
         do {
-            System.out.println(" 1.To validate First Name \n 2.To validate Last Name \n 3.Quit ");
+            System.out.println(" 1.To validate First Name \n 2.To validate Last Name \n 3.To Validate Email ID \n 4.Quit ");
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
@@ -18,11 +18,14 @@ public class UserRegistrationMain {
                 case 2:
                     UserRegistration.validLastName();
                     break;
-                case 3:
+                case 3 :
+                        UserRegistration.validEmail();
+                    break;
+                case 4:
                     System.out.println("Thank You ");
                     break;
             }
 
-        } while (choice != 3);
+        } while (choice != 4);
     }
 }
